@@ -1,5 +1,7 @@
 package com.base.apiv1.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 public class Estudiante {
     private int id; 
     private String nombre;
@@ -14,6 +16,7 @@ public class Estudiante {
         this.carrera = carrera;
         this.edad = edad;
     }  
+    @JsonCreator 
     public Estudiante() {
     }
 
@@ -40,5 +43,11 @@ public class Estudiante {
     }
     public void setCarrera(String carrera) {
         this.carrera = carrera; 
+    }
+    public int getEdad(){
+        return this.edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 }
